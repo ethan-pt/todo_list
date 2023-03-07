@@ -1,3 +1,6 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
 <a href="{% url 'tasks' %}">Go Back</a><br>
 
 
@@ -15,3 +18,5 @@
 <p>Status: Not Completed</p>
 
 {% endif %}
+
+{% endblock content %}
