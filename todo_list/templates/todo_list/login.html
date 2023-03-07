@@ -4,5 +4,7 @@
     {% csrf_token %}
     {{form.as_p}}
 
-    <input value="Login" type="sumbit">
+    <input value="Login" type="submit">
 </form>
+
+<p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
