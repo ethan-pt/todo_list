@@ -14,7 +14,7 @@ from .models import Task
 
 
 class TodoListLogin(LoginView):
-    template_name = 'base/login.html'
+    template_name = 'todo_list/login.html'
     fields = '__all__'
     redirect_authenticated_user = True
 
@@ -23,7 +23,7 @@ class TodoListLogin(LoginView):
     
 
 class TodoListRegister(FormView):
-    template_name = 'base/register.html'
+    template_name = 'todo_list/register.html'
     form_class = UserCreationForm
     success_url = reverse_lazy('tasks')
 
