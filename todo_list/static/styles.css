@@ -47,6 +47,7 @@ input {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px;
     background-color: #fff;
     border-top: 1px solid #dfe4ea;
     overflow: hidden;
@@ -54,7 +55,6 @@ input {
 
 .task-title {
     display: flex;
-    padding: 20px;
 }
 
 .task-title a {
