@@ -9,11 +9,20 @@
 <div class="card-body">
     <form method="POST">
         {% csrf_token %}
-        {{form.as_p}}
 
-        <input class="button" value="Register" type="submit">
+        <label>{{form.username.label}}</label>
+        {{form.username}}
+
+        <label>{{form.password1.label}}</label>
+        {{form.password1}}
+
+        <label>{{form.password2.label}}</label>
+        {{form.password2}}
+
+        <input style="margin-top: 10px;" class="button" value="Register" type="submit">
     </form>
 
     <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
 </div>
+
 {% endblock content %}
