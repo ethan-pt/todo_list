@@ -83,7 +83,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'todo_list.apps.TodoListConfig'
+    'todo_list.apps.TodoListConfig',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -122,6 +123,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Use django-environ to parse the connection string
 DATABASES = {'default': env.db()}
 
+# If the flag as been set, configure to use proxy
+if os.getenv("USE_CLOUD_SQL_AUTH_PROXY", None):
+    DATABASES["default"]["HOST"] = "127.0.0.1"
+    DATABASES["default"]["PORT"] = 5432
+
+# [END cloudrun_django_database_config]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
