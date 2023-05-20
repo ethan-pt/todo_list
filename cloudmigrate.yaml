@@ -60,7 +60,7 @@ steps:
 substitutions:
   _INSTANCE_NAME: todolistdbadmin
   _REGION: us-central1
-  _SERVICE_NAME: todo_list
+  _SERVICE_NAME: todo-list
   _SECRET_SETTINGS_NAME: todo_django_settings
 
 images:
