@@ -58,10 +58,10 @@ steps:
       ]
 
 substitutions:
-  _INSTANCE_NAME: todolistdbadmin
+  _INSTANCE_NAME: todo-instance
   _REGION: us-central1
   _SERVICE_NAME: todo-list
-  _SECRET_SETTINGS_NAME: todo_django_settings
+  _SECRET_SETTINGS_NAME: django_settings_todo
 
 images:
   - "gcr.io/${PROJECT_ID}/${_SERVICE_NAME}"
